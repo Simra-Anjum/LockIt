@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 
-const LoginPopup = ({ setShowLogin, setToken }) => { // ✅ Navbar se prop aaya
+const LoginPopup = ({ setShowLogin, setToken }) => { 
   const [currState, setCurrState] = useState("Sign Up");
   const [data, setData] = useState({ name: "", email: "", password: "" });
 
@@ -38,8 +38,8 @@ const LoginPopup = ({ setShowLogin, setToken }) => { // ✅ Navbar se prop aaya
   if (result.success) {
     toast.success(result.message);
     localStorage.setItem("authToken", result.token); 
-      localStorage.setItem("isNewUser", "true");   // ✅ token save
-    setToken(result.token);                          // ✅ Navbar update
+      localStorage.setItem("isNewUser", "true");   
+    setToken(result.token);                          
     setShowLogin(false);
   } else {
     toast.error(result.message);
@@ -69,7 +69,7 @@ const LoginPopup = ({ setShowLogin, setToken }) => { // ✅ Navbar se prop aaya
           </button>
         </div>
 
-        {/* Inputs */}
+       
         <div className="flex flex-col gap-5">
           {currState === "Sign Up" && (
             <input
@@ -102,18 +102,15 @@ const LoginPopup = ({ setShowLogin, setToken }) => { // ✅ Navbar se prop aaya
           />
         </div>
 
-        {/* Button */}
         <button className="p-2 rounded bg-green-700 text-white text-base cursor-pointer">
           {currState === "Login" ? "Login" : "Create Account"}
         </button>
 
-        {/* Checkbox */}
         <div className="flex items-start gap-2 -mt-3 font-bold text-gray-700 text-xs">
           <input type="checkbox" required className="mt-1" />
           <p>By continuing, I agree to the terms of use & privacy policy.</p>
         </div>
 
-        {/* Toggle */}
         {currState === "Login" ? (
           <p className="text-gray-700 text-sm">
             Create a new account?{" "}

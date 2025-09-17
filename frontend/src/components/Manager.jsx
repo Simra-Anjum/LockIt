@@ -8,7 +8,7 @@ const Manager = ({ token, setToken }) => {
   const [form, setForm] = useState({ site: "", username: "", passwords: "" });
   const [passwordArray, setPasswordArray] = useState([]);
 
-  // ✅ On mount check token
+  
   useEffect(() => {
     const storedToken = localStorage.getItem("authToken");
     if (storedToken) {
@@ -17,7 +17,7 @@ const Manager = ({ token, setToken }) => {
     }
   }, [token]);
 
-  // ✅ Fetch passwords for current user
+  
   const getPasswords = async (userToken) => {
     try {
       const res = await fetch("http://localhost:3000/api/passwords", {
@@ -30,7 +30,6 @@ const Manager = ({ token, setToken }) => {
     }
   };
 
-  // ✅ Copy text
   const copyText = (text) => {
     toast("Copied!", {
       position: "top-right",
@@ -41,7 +40,7 @@ const Manager = ({ token, setToken }) => {
     navigator.clipboard.writeText(text);
   };
 
-  // ✅ Save new password
+ 
   const savePassword = async () => {
     if (
       form.site.length > 3 &&
@@ -75,13 +74,12 @@ const Manager = ({ token, setToken }) => {
     }
   };
 
-  // ✅ Edit password
   const editPassword = (id) => {
     setForm({ ...passwordArray.filter((i) => i.id === id)[0], id: id });
     setPasswordArray(passwordArray.filter((item) => item.id !== id));
   };
 
-  // ✅ Delete password
+
   const deletePassword = async (id) => {
     setPasswordArray(passwordArray.filter((item) => item.id !== id));
     try {
@@ -134,7 +132,7 @@ const Manager = ({ token, setToken }) => {
           Your own Password Manager
         </p>
 
-        {/* Input Form */}
+      
         <div className="flex flex-col p-4 text-black gap-8 items-center">
           <input
             value={form.site}
@@ -180,7 +178,7 @@ const Manager = ({ token, setToken }) => {
           </button>
         </div>
 
-        {/* Passwords Section */}
+      
         <div className="passwords">
           <h2 className="font-bold text-2xl py-4 text-[#020c21]">
             Your Password

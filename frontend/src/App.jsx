@@ -9,14 +9,6 @@ import About from './components/About'
 function App() {
       const [token, setToken] = useState("");
 
-  // ✅ App load hote hi token check karenge
-  // useEffect(() => {
-  //   const storedToken = localStorage.getItem("authToken");
-  //   if (storedToken) {
-  //     setToken(storedToken);
-  //     //  getPasswords(storedToken);
-  //   }
-  // }, []);
 
   return  (
 
@@ -24,7 +16,7 @@ function App() {
     <div>
 
      
-      {/* Navbar */}
+  
       <Navbar token={token} setToken={setToken} />
 
       <Header/>
