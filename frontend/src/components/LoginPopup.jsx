@@ -13,7 +13,7 @@ const LoginPopup = ({ setShowLogin, setToken }) => {
     e.preventDefault();
     try {
       if (currState === "Login") {
-        const res = await fetch("http://localhost:3000/api/users/login", {
+        const res = await fetch("http://https://lockit-bbb.onrender.com/api/users/login", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
@@ -29,7 +29,7 @@ const LoginPopup = ({ setShowLogin, setToken }) => {
           toast.error(result.message);
         }
       } else {
-        const res = await fetch("http://localhost:3000/api/users/signup", {
+        const res = await fetch("http://https://lockit-bbb.onrender.com/api/users/signup", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
