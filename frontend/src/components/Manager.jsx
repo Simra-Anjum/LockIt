@@ -20,7 +20,7 @@ const Manager = ({ token, setToken }) => {
   
   const getPasswords = async (userToken) => {
     try {
-      const res = await fetch("http://https://lockit-bbb.onrender.com/api/passwords", {
+      const res = await fetch("https://lockit-bbb.onrender.com/api/passwords", {
         headers: { token: userToken },
       });
       const passwords = await res.json();
@@ -51,7 +51,7 @@ const Manager = ({ token, setToken }) => {
       setPasswordArray([...passwordArray, newPass]);
 
       try {
-        await fetch("http://https://lockit-bbb.onrender.com/api/passwords", {
+        await fetch("https://lockit-bbb.onrender.com/api/passwords", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -83,7 +83,7 @@ const Manager = ({ token, setToken }) => {
   const deletePassword = async (id) => {
     setPasswordArray(passwordArray.filter((item) => item.id !== id));
     try {
-      await fetch(`http://https://lockit-bbb.onrender.com/api/passwords/${id}`, {
+      await fetch(`https://lockit-bbb.onrender.com/api/passwords/${id}`, {
         method: "DELETE",
         headers: { token: token },
       });
