@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
+  <style>
+    :root { color: #020c21; }
+    .stroke { stroke: currentColor; stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; }
+    #halo { stroke: currentColor; stroke-width: 2; opacity: .2; transform-origin: 128px 120px; animation: halo 2s ease-in-out infinite; }
+    #tick { stroke-dasharray: 160; stroke-dashoffset: 160; animation: draw 1.6s ease forwards .3s; }
+    @keyframes halo { 0%,100% { transform: scale(1); opacity: .15; } 50% { transform: scale(1.08); opacity: .35; } }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+  </style>
+  <path d="M128 36l72 24v58c0 52-42 90-72 102-30-12-72-50-72-102V60l72-24z" class="stroke"/>
+  <ellipse id="halo" cx="128" cy="120" rx="92" ry="100" />
+  <path id="tick" d="M88 122l28 28 52-52" class="stroke"/>
+</svg>

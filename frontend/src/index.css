@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .mycontainer {
+    @apply container px-40 py-16 mx-auto;
+  }
+}
+
+body  {  
+  background-color: #000000;
+  background-image: radial-gradient(#ffffff33 1px, #020c21 1px);
+  background-size: 20px 20px;
+  min-height: 100vh;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 3s ease-in-out forwards;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+

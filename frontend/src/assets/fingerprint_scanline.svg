@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
+  <style>
+    :root { color: #020c21; }
+    .stroke { stroke: currentColor; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+    #scan { stroke: currentColor; stroke-width: 10; animation: sweep 2.2s ease-in-out infinite; }
+    @keyframes sweep {
+      0%,100% { transform: translateY(-80px); opacity: .1; }
+      50% { transform: translateY(80px); opacity: .35; }
+    }
+  </style>
+  <path d="M28 84V52c0-8 8-16 16-16h32" class="stroke"/>
+  <path d="M228 84V52c0-8-8-16-16-16h-32" class="stroke"/>
+  <path d="M28 172v32c0 8 8 16 16 16h32" class="stroke"/>
+  <path d="M228 172v32c0 8-8 16-16 16h-32" class="stroke"/>
+  <g transform="translate(0,8)">
+    <path d="M128 56c28 0 52 20 52 48" class="stroke"/>
+    <path d="M76 104c0-34 26-60 52-60" class="stroke"/>
+    <path d="M96 124c0-22 14-40 32-40 14 0 28 10 28 26" class="stroke"/>
+    <path d="M84 132c0-34 24-60 56-60" class="stroke"/>
+    <path d="M116 152c-6-8-8-18-8-28 0-22 16-36 36-36" class="stroke"/>
+    <path d="M92 152c0-42 26-68 60-68" class="stroke"/>
+  </g>
+  <line id="scan" x1="56" x2="200" y1="128" y2="128"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
+  <style>
+    :root { color: #020c21; }
+    .stroke { stroke: currentColor; stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; }
+    #check { stroke-dasharray: 120; stroke-dashoffset: 120; animation: draw .9s ease forwards .4s; }
+    #card { transform-origin: 128px 128px; animation: pop .6s ease; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes pop { 0%{transform: scale(.9); opacity:.6} 100%{transform: scale(1); opacity:1} }
+  </style>
+  <rect id="card" x="52" y="68" width="152" height="120" rx="12" class="stroke"/>
+  <path id="check" d="M84 128l30 30 58-58" class="stroke"/>
+</svg>

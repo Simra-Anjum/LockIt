@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
+  <style>
+    :root { color: #020c21; }
+    .stroke { stroke: currentColor; stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; }
+    .fill { fill: currentColor; }
+    #ring { transform-origin: 88px 88px; animation: spin 3s linear infinite; }
+    #spark1, #spark2, #spark3 { opacity: 0; animation: spark 1.6s ease-in-out infinite; }
+    #spark2 { animation-delay: .3s; } #spark3 { animation-delay: .6s; }
+    @keyframes spin { to { transform: rotate(360deg);} }
+    @keyframes spark { 0%{opacity:0; transform: scale(.6);} 30%{opacity:1; transform: scale(1);} 100%{opacity:0; transform: scale(1.4);} }
+  </style>
+  <circle id="ring" cx="88" cy="88" r="44" class="stroke"/>
+  <path d="M126 126l72 72" class="stroke"/>
+  <rect x="170" y="170" width="42" height="22" rx="6" class="stroke"/>
+  <path d="M196 170v-16" class="stroke"/>
+  <circle id="spark1" cx="44" cy="72" r="4" class="fill"/>
+  <circle id="spark2" cx="128" cy="60" r="4" class="fill"/>
+  <circle id="spark3" cx="100" cy="132" r="4" class="fill"/>
+</svg>

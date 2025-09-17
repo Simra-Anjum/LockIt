@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
+  <style>
+    :root { color: #020c21; }
+    .stroke { stroke: currentColor; stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; }
+    .fill { fill: currentColor; }
+    #pulse { transform-origin: 128px 160px; animation: pulse 1.6s ease-in-out infinite; }
+    @keyframes pulse {
+      0%,100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.07); opacity: 0.85; }
+    }
+  </style>
+  <rect id="pulse" x="44" y="112" rx="20" ry="20" width="168" height="120" class="stroke"/>
+  <path d="M88 112V92c0-22 18-40 40-40s40 18 40 40v20" class="stroke"/>
+  <circle cx="128" cy="168" r="12" class="fill"/>
+  <path d="M128 180v26" class="stroke"/>
+</svg>

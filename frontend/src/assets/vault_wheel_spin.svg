@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
+  <style>
+    :root { color: #020c21; }
+    .stroke { stroke: currentColor; stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; }
+    #wheel { transform-origin: 176px 128px; animation: spin 4s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg);} }
+  </style>
+  <rect x="36" y="60" width="184" height="136" rx="14" class="stroke"/>
+  <circle cx="176" cy="128" r="30" class="stroke"/>
+  <g id="wheel">
+    <line x1="176" y1="98"  x2="176" y2="158" class="stroke"/>
+    <line x1="146" y1="128" x2="206" y2="128" class="stroke"/>
+    <line x1="156" y1="108" x2="196" y2="148" class="stroke"/>
+    <line x1="196" y1="108" x2="156" y2="148" class="stroke"/>
+  </g>
+  <line x1="60" y1="88" x2="60" y2="168" class="stroke"/>
+</svg>
